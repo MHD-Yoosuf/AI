@@ -1,0 +1,29 @@
+import random
+moves = ["rock", "paper", "scissors"]
+
+while True:
+    
+    player = input("Enter rock, paper or scissors (or 'quit' to exit): ").lower()
+    
+    if player == "quit":
+        print("Game Over. Thanks for playing!")
+        break
+    
+    if player not in moves:
+        print("Invalid choice, try again!")
+        continue
+    
+    ai = random.choice(moves)
+    print("AI chose:", ai)
+
+   
+    if player == ai:
+        print("It's a tie!")
+    elif (player == "rock" and ai == "scissors") or \
+         (player == "paper" and ai == "rock") or \
+         (player == "scissors" and ai == "paper"):
+        print("You win!")
+    else:
+        print("AI wins!")
+    
+    print()  

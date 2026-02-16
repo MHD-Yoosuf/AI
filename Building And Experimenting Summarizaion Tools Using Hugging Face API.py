@@ -58,7 +58,6 @@ else:
     max_length = 150
     print(Fore.BLUE + "Using standard summarization settings")
 
-# Generate summary
 summary = summarize_text(user_text, min_length, max_length, model_choice)
 
 if summary:
@@ -66,3 +65,4 @@ if summary:
     print(Fore.GREEN + summary)
 else:
     print(Fore.RED + " Failed to generate summary.")
+
